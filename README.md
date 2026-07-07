@@ -41,4 +41,4 @@ AI-Email-Writer/
 
 ## Author
 
-Made with ❤️ by **Kriday Verma**
+Made by **Kriday Verma**

@@ -1,5 +1,6 @@
 # AI Email Writer ✉️
 ![Project Screenshot](AI-email-writer screenshot.png)
+
 An AI-powered email writing web application built using **Flask**, **HTML**, **CSS**, and **Google Gemini API**.
 
 ## Features

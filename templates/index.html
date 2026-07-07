@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Email Writer</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <h1>AI Email Writer</h1>
+
+        <p class="moving-text">
+            Write emails without overthinking.
+        </p>
+
+        <p>
+            Write professional emails confidently, without worrying about being judged.
+        </p>
+
+    </div>
+
+    <div class="main-content">
+
+        <label for="prompt">
+            Describe the email you'd like AI to write.
+        </label>
+
+        <form method="POST">
+
+            {% if message %}
+                <p class="error">{{ message }}</p>
+            {% endif %}
+
+            <textarea
+                id="prompt"
+                name="prompt"
+                rows="8"
+                cols="50"
+                placeholder="Example: Write a leave email to my principal for two days because of fever..."
+            >{{ prompt }}</textarea>
+
+            <br><br>
+
+            <button
+                type="submit"
+                name="action"
+                value="generate"
+                class="generate-btn">
+                Generate
+            </button>
+
+            <button
+                type="submit"
+                name="action"
+                value="clear"
+                class="clear-btn">
+                Clear
+            </button>
+
+        </form>
+
+        {% if result %}
+
+            <hr>
+
+            <h2>Generated Email</h2>
+
+            <div class="result">
+                <pre>{{ result }}</pre>
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
